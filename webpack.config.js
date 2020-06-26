@@ -1,9 +1,8 @@
 const path = require('path');  //permite acceder donde nos estemos moviendo en el proyecto
 const HtmlWebpackPlugin = require('html-webpack-plugin'); //nos permite trabajar con html
-const { Resolver } = require('dns');
 
 module.exports = {
-  entry: '.src/index.js',    //archivo de entrada, todo codigo inicial
+  entry: './src/index.js',    //archivo de entrada, todo codigo inicial
   output: {                  //donde vamos a poner el proyecto estructurado, compilado y listo para produccion
     path: path.resolve(__dirname, 'dist'),  
     filename: 'main.js'      //nombre del archivo a generar, el que sale a produccion
