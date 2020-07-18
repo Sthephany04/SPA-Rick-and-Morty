@@ -14,7 +14,7 @@ module.exports = {
     rules: [                 //reglas por medio de un arreglo
       {
         test: /\.js?$/,      
-        exclude: /node.modules/,  
+        exclude: /node_modules/,  
         use: {
           loader: 'babel-loader',  //configuracion para trabajar todo el codigo
         }
@@ -22,12 +22,12 @@ module.exports = {
     ]
   },
   plugins: [                
-    new HtmlWebpackPlugin([   //permite trabajar con los archivos html
+    new HtmlWebpackPlugin(   //permite trabajar con los archivos html
       {
         inject: true,         //como inyectar un valor al archivo html
         template: './public/index.html',
         filename: './index.html',
       }
-    ])
+    ),
   ]
 }
